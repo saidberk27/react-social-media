@@ -17,14 +17,16 @@ export const Navbar = () => {
     <div className="navbar">
       <div>
         <Link to="/" className="nav-link">Home</Link>
-        <Link to="/login" className="nav-link" >Login</Link>
+        {!user ? <Link to="/login" className="nav-link" >Login</Link> : <Link to="/create-post" className="nav-link" >Create Post</Link>}
+        
+
       </div>
       <div className="user-info">
         {user &&
         (<> 
             <p>{username}</p>
             <img src={auth.currentUser?.photoURL || ""} alt="User" />
-            <button onClick={signUserOut}>Log Out</button>
+            <button onClick={signUserOut} className="nav-button">Log Out</button>
         
         </>)}
        

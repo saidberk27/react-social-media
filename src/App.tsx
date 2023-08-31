@@ -4,6 +4,7 @@ import './App.css';
 import { Main } from './pages/main';
 import { Login } from './pages/login';
 import { Navbar } from './components/navbar';
+import { CreatePost } from './pages/create-post/create_post';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main/>}/>
           <Route path="/login" element={<Login/>}/>
+          <Route path="/create-post" element={<CreatePost />}/>
 
         </Routes>
       </Router>

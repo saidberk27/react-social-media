@@ -1,0 +1,38 @@
+/* CreateForm.css */
+.create-form {
+    margin-top: 100px; /* Adjust margin-top to make space for the fixed navbar */
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: linear-gradient(to right, #007bff, #00bcd4);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 0.5rem;
+  }
+  
+  .submit-button {
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .submit-button:hover {
+    background-color: #ffca2c;
+    transform: scale(1.05);
+  }

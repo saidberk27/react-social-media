@@ -45,4 +45,21 @@
     height: 50px;
     border-radius: 50%;
   }
+
+  .nav-button {
+    background-color: #ffc107;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: 'Roboto', sans-serif; /* Use the Roboto font for the navbar */
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .nav-button:hover {
+    background-color: #ffca2c;
+    transform: scale(1.05);
+  }
   
