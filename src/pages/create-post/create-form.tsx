@@ -1,4 +1,3 @@
-import React from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -6,6 +5,7 @@ import { addDoc, collection } from 'firebase/firestore';
 import { auth, db } from '../../config/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import './create-form.css'; // Import the CreateForm.css
+import { useNavigate } from 'react-router-dom';
 
 interface CreateFormData {
   title: string;
@@ -14,7 +14,7 @@ interface CreateFormData {
 
 export const CreateForm = () => {
   const [user] = useAuthState(auth);
-
+  const navigate = useNavigate();
   const schema = yup.object().shape({
     title: yup.string().required('Gönderinin Başlığı Olmalı'),
     content: yup.string().required('Gönderinizin İçeriği Olmalı'),
@@ -33,6 +33,7 @@ export const CreateForm = () => {
       userName: user?.displayName,
       userId: user?.uid,
     });
+    navigate("/");
   };
 
   return (
